@@ -30,6 +30,37 @@ namespace _2022_01_25_Fuvar
                 }
             }
             Console.WriteLine($"4.feladat: {db} fuvar alatt: {bevétel}$");
+
+            //5.
+            int bankkártya = 0;
+            int készpénz = 0;
+            int vitatott = 0;
+            int ingyenes = 0;
+            int ismeretlen= 0;
+            foreach (var f in fuvarok)
+            {
+                if (f.FizetésMód == "bankkártya")
+                {
+                    bankkártya++;
+                }
+                if (f.FizetésMód == "készpénz")
+                {
+                    készpénz++;
+                }
+                if (f.FizetésMód == "vitatott")
+                {
+                    vitatott++;
+                }
+                if (f.FizetésMód == "ingyenes")
+                {
+                    ingyenes++;
+                }
+                if (f.FizetésMód == "ismeretlen")
+                {
+                    ismeretlen++;
+                }
+            }
+
             Console.ReadKey();
         }
     }
