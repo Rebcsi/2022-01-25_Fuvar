@@ -60,6 +60,13 @@ namespace _2022_01_25_Fuvar
                     ismeretlen++;
                 }
             }
+            //6
+            double ÖsszMérföld = 0;
+            foreach (var f in fuvarok)
+            {
+                ÖsszMérföld += f.Távolság;
+            }
+            Console.WriteLine($"6.feladat: {ÖsszMérföld * 1.6:0.00}km");
 
             Console.ReadKey();
         }
